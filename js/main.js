@@ -22,7 +22,7 @@ function startTime() {
     var currentTime = new Date()
 
     // store the current hours, minutes and seconds in variables
-    var month = currentTime.getMonth()
+    var month = currentTime.getMonth() + 1
     var day = currentTime.getDate()
     var year = currentTime.getFullYear()
     var hour = currentTime.getHours()
