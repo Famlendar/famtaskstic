@@ -3,11 +3,27 @@
 	padding: 0;
 }
 
+/*Nav*/
+nav {
+	background-color: yellow;
+	height: 35px;
+}
+
+nav h1 {
+	color: #000000;
+	text-align: center;
+	padding-top: 5px;
+}
+
+nav h1 span {
+	color: #FF0000;
+}
 /*Date Time Style Section*/
 .dateTime {
 	background-color: #000000;
 	width: auto;
 	height: 100px;
+
 }
 /*JavaScipt Date Time Text*/
 #js-dateTime {
@@ -17,4 +33,5 @@
     height: 50px;
     margin: auto;
     text-align: center;
+    padding-top: 15px;
 }
