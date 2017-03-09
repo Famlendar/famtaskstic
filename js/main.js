@@ -1,4 +1,7 @@
+
+
 // Date and Time Display
+
 // create var for section element
 var dateTime = document.getElementById('js-dateTime');
 // Append Date Time class to Date Time section element by id
@@ -9,25 +12,25 @@ function checkTime(i) {
     // check if number is less than 10
     if (i < 10) {
         // adds zero in front of number
-        i = "0" + i
+        i = "0" + i;
     }
 
     // send back new value
-    return i
+    return i;
 }
 
 // runs on page load 
 function startTime() {
     // store the time in a variable
-    var currentTime = new Date()
+    var currentTime = new Date();
 
     // store the current hours, minutes and seconds in variables
-    var month = currentTime.getMonth() + 1
-    var day = currentTime.getDate()
-    var year = currentTime.getFullYear()
-    var hour = currentTime.getHours()
-    var minute = currentTime.getMinutes()
-    var second = currentTime.getSeconds()
+    var month = currentTime.getMonth() + 1;
+    var day = currentTime.getDate();
+    var year = currentTime.getFullYear();
+    var hour = currentTime.getHours();
+    var minute = currentTime.getMinutes();
+    var second = currentTime.getSeconds();
  
     //change military time to standard time if hours is greater than 12
     if (hour > 12) {
@@ -36,9 +39,9 @@ function startTime() {
     }
 
     // update variables minute and second using checkTime function from line 1
-    hour = checkTime(hour)
-    minute = checkTime(minute)
-    second = checkTime(second)
+    hour = checkTime(hour);
+    minute = checkTime(minute);
+    second = checkTime(second);
 
     //select element with id="js-dateTime" and change the text to the current time
     dateTime.textContent = month + '/' + day + '/' + year + '  ' + hour + ":" + minute + ":" + second;
@@ -51,3 +54,21 @@ function startTime() {
 
 // add event listener to start function so finally time will be displayed
 dateTime.addEventListener('onload', startTime(), false);
+
+// Task Section
+var task = document.getElementById('js-task');
+//Create a form
+var form = document.createElement('form');
+var input = document.createElement('input');
+var submit = document.createElement('input');
+
+
+input.setAttribute('type', 'text');
+input.setAttribute('placeholder', 'Have a Task');
+input.setAttribute('id', 'js-userInput')
+submit.setAttribute('type', 'submit')
+submit.setAttribute('value', 'Task It!')
+
+task.appendChild(form)
+form.appendChild(input)
+form.appendChild(submit)
