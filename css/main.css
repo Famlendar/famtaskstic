@@ -35,3 +35,16 @@ nav h1 span {
     text-align: center;
     padding-top: 15px;
 }
+
+/*Task Section*/
+.task{
+	float: right;
+	background-color: #000000;
+	color: #ffffff;
+	height: auto;
+
+}
+li {
+	text-align:left;
+	font-size:20px;
+}

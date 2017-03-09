@@ -57,18 +57,43 @@ dateTime.addEventListener('onload', startTime(), false);
 
 // Task Section
 var task = document.getElementById('js-task');
+var taskHeader = document.createElement('h3')
 //Create a form
 var form = document.createElement('form');
 var input = document.createElement('input');
 var submit = document.createElement('input');
+// create orderedlist
+var list = document.createElement('ol');
 
+//Text Nodes
+var  headerText = document.createTextNode('Task Bar');
 
+// create attributes
 input.setAttribute('type', 'text');
-input.setAttribute('placeholder', 'Have a Task');
-input.setAttribute('id', 'js-userInput')
-submit.setAttribute('type', 'submit')
-submit.setAttribute('value', 'Task It!')
+input.setAttribute('placeholder', 'Have a Task?');
+input.setAttribute('id', 'js-userInput');
+submit.setAttribute('type', 'button');
+submit.setAttribute('value', 'Task It!');
+submit.setAttribute('onclick', 'store()');
+list.setAttribute('id', 'js-list');
 
-task.appendChild(form)
-form.appendChild(input)
-form.appendChild(submit)
+// Class Names
+task.className = 'task';
+taskHeader.className = 'taskHeader';
+
+// Append var
+taskHeader.appendChild(headerText);
+task.appendChild(taskHeader);
+task.appendChild(form);
+form.appendChild(input);
+form.appendChild(submit);
+task.appendChild(list);
+
+// onclick function
+function store() {
+    var item = document.getElementById('js-userInput').value;
+    var text = document.createTextNode(item);
+    var newItem = document.createElement('li');
+    newItem.appendChild(text);
+    list.appendChild(newItem);
+}
