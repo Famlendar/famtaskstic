@@ -1,0 +1,20 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*Date Time Style Section*/
+.dateTime {
+	background-color: #000000;
+	width: auto;
+	height: 100px;
+}
+/*JavaScipt Date Time Text*/
+#js-dateTime {
+	color: #ffffff;
+    font-family: courier, monospace;
+    font-size: 30px;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+}
