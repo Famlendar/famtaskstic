@@ -11,8 +11,8 @@ nav {
 
 nav h1 {
 	color: #000000;
-	text-align: center;
-	padding-top: 5px;
+	display: inline;
+	margin-top: 15px;
 }
 
 nav h1 span {
@@ -20,31 +20,67 @@ nav h1 span {
 }
 /*Date Time Style Section*/
 .dateTime {
-	background-color: #000000;
-	width: auto;
-	height: 100px;
+	height: 30px;
 
 }
 /*JavaScipt Date Time Text*/
 #js-dateTime {
-	color: #ffffff;
+	color: #000000;
     font-family: courier, monospace;
-    font-size: 30px;
-    height: 50px;
+    font-size: 25px;
+   /* height: 50px;*/
     margin: auto;
-    text-align: center;
-    padding-top: 15px;
+   	float: right; 
+   	padding-top: 5px;
+    padding-right: 15px;
 }
 
 /*Task Section*/
-.task{
-	float: right;
+.task {
+	text-align: center;
 	background-color: #000000;
+	padding-bottom: 10px;
 	color: #ffffff;
-	height: auto;
-
+	
 }
+
+.task .taskHeader {
+	margin-bottom: 15px;
+	font-weight: lighter;
+	font-size: 25px;
+	background-color: #000000;
+}
+
+.task input {
+	background-color: #000000;
+}
+
+.task input[type=text] {
+	font-size: 20px;
+	background-color: #ffffff;
+	border: none;
+	padding: 3px 0px 3px 5px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.task input[type=button] {
+	color: #ff0000;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 3px 5px 3px 5px;
+	background-color: yellow;
+	border: none;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	cursor: pointer;
+}
+
 li {
-	text-align:left;
-	font-size:20px;
+	padding-top: 3px;
+	margin-top: 30px;
+	text-align: center;
+	font-size: 20px;
+	background-color: #000000;
 }

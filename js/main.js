@@ -70,7 +70,7 @@ var  headerText = document.createTextNode('Task Bar');
 
 // create attributes
 input.setAttribute('type', 'text');
-input.setAttribute('placeholder', 'Have a Task?');
+input.setAttribute('placeholder', 'Add Task List Here!');
 input.setAttribute('id', 'js-userInput');
 submit.setAttribute('type', 'button');
 submit.setAttribute('value', 'Task It!');
@@ -94,6 +94,7 @@ function store() {
     var item = document.getElementById('js-userInput').value;
     var text = document.createTextNode(item);
     var newItem = document.createElement('li');
+    form.reset()
     newItem.appendChild(text);
     list.appendChild(newItem);
 }
